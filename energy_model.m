@@ -1,7 +1,7 @@
 close;
 clear;
 clc;
-ftsz = 14;
+ftsz = 16;
 %import the data
 data =  importdata('data_to_build_energy_model.txt');
 
@@ -33,7 +33,7 @@ err=sqrt(mean((energy-simulated_energy).^2))
 %figure('Position',[440 378 560 620/3]);
 plot(time,energy,'r.')
 hold on;
-plot(time,simulated_energy,'Linewidth',2)
+plot(time,simulated_energy,'Linewidth',3)
 set(gca , 'FontSize', ftsz);
 set(gca , 'xTick', 0:3:max(time)+1);
 set(gca , 'yTick', 0:3:max(energy)+1);
