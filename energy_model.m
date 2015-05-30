@@ -30,7 +30,7 @@ simulated_energy=a*time+b;
 err=sqrt(mean((energy-simulated_energy).^2))
 
 % plot
-%figure('Position',[440 378 560 620/3]);
+figure('Position',[440 378 560 620/3]);
 plot(time,energy,'r.')
 hold on;
 plot(time,simulated_energy,'Linewidth',3)
