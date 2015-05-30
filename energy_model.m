@@ -13,12 +13,12 @@ energy = data(:,4);
 outliers =  abs( median( time ) - time ) > 3 * std(time) ;
 time(outliers, :) = [] ; 
 energy(outliers, :) = [] ; 
-% outliers = energy <= 0.1
-% time(outliers, :) = [] ; 
-% energy(outliers, :) = [] ; 
-%  outliers = time < 1
-%  time(outliers, :) = [] ; 
-%  energy(outliers, :) = [] ;
+ outliers = energy <= 0.1
+ time(outliers, :) = [] ; 
+ energy(outliers, :) = [] ; 
+  outliers = time < 1
+  time(outliers, :) = [] ; 
+energy(outliers, :) = [] ;
 
 
 p = polyfit(time,energy,1)
@@ -35,8 +35,8 @@ plot(time,energy,'r.')
 hold on;
 plot(time,simulated_energy,'Linewidth',3)
 set(gca , 'FontSize', ftsz);
-set(gca , 'xTick', 0:3:max(time)+1);
-set(gca , 'yTick', 0:3:max(energy)+1);
+set(gca , 'xTick', 0:3:max(time));
+set(gca , 'yTick', 0:3:max(energy));
 xlabel('Time (sec)');
 ylabel('Energy (Joule)')
 
