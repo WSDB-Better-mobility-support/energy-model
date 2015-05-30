@@ -37,6 +37,6 @@ plot(time,simulated_energy,'Linewidth',3)
 set(gca , 'FontSize', ftsz);
 set(gca , 'xTick', 0:3:max(time)+1);
 set(gca , 'yTick', 0:3:max(energy)+1);
-xlabel('time (sec)');
+xlabel('Time (sec)');
 ylabel('Energy (Joule)')
 
